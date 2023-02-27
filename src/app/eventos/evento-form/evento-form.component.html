@@ -1,0 +1,38 @@
+<p-card>
+
+  <form>
+    <div class="ui-g">
+      <div class="ui-g-12 ui-fluid">
+        <h2>Cadastro</h2>
+      </div>
+  
+      <div class="ui-g-2 ui-fluid">
+        <label>Descricao</label>
+        <input pInputText name="evento" ng-model="evento.Descricao"/>
+      </div>
+  
+      <div class="ui-g-10 ui-fluid">
+        <label>Local</label>
+        <input pInputText name="evento" ng-model="evento.Local"/>
+      </div>
+  
+      <div class="ui-g-4 ui-fluid">
+        <label>Data</label>
+        <input pInputText name="evento" ng-model="evento.Data"/>
+      </div>
+  
+      <div class="ui-g-4 ui-fluid">
+        <label>Hora</label>
+        <input pInputText name="evento" ng-model="evento.Hora"/>
+      </div>
+  
+     
+    </div>
+
+    <button pButton type="submit" *ngIf="!evento.codigo" >SALVAR</button>
+  
+  </form>
+  
+</p-card>
+
+

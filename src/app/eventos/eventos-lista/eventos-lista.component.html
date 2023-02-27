@@ -1,0 +1,30 @@
+<p-table>
+  <ng-template>
+      <tr>
+          <th>Codigo</th>
+          <th>Nome</th>
+          <th>Local</th>
+          <th>DATA</th>
+          <th>Horario</th>
+      </tr>
+  </ng-template>
+      <tr *ngFor="let evento of eventos" >
+        <td>{{ evento.codigo }}</td>
+        <td>{{ evento.nome }}</td>
+        <td>{{ evento.local}}</td>
+        <td>{{ evento.data }}</td>
+        <td>{{ evento.horario }}</td>
+      
+
+      <td> <!--routerLink="{{ evento.codigo }}"-->
+        <button class="btn btn-primary">
+            <i class="fa fa-edit"></i>
+        </button>
+
+        <button class="btn btn-danger" (click)="SelecionaEventoParaDelecao(evento)" 
+                data-toggle="modal" data-target="#modalDelecao">
+            <i class="fa fa-trash"></i>
+        </button>
+        </td>
+      </tr>
+</p-table>
